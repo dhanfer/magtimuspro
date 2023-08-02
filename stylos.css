@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=PT+Serif:wght@700&family=Raleway&display=swap');
+
+/*normalizacion general para toda la pagina*/
+*{
+    margin: 0  ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*cambio de color del body*/
+body{
+    background: #f5f5f5;
+}
+
+
+/*header-cabecera*/
+
+header{
+    height: 100px;
+}
+/*contenedor padre del header-cabecera*/
+.container__header{
+    max-width: 1200px;/*ancho maximo*/
+    height: 100%;/*altura*/
+    margin: auto;/*centra los elementos*/
+    padding: 40px;/*relleno para que nos cree un espaciado*/
+    padding-top: 80px;/*relleno de 80px en la parte de arriba de la cabecera*/
+    display: flex;/*para colocar los elementos uno al lado del otro*/
+    justify-content: space-between;/*para que el contenido se distribuya*/
+    align-items: center;/*alinear el contenido*/
+}
+
+/*posicionamiento del logo*/
+.logo img{
+   width: 180px;/*ancho del logo*/
+   cursor: pointer;
+}
+
+/*aspectos del menu*/
+.menu nav ul{
+    display: flex;/*poner los elementos uno al lado del otro*/
+}
+.menu nav ul li{
+    list-style: none;/*quitar el estilo de la lista*/
+    padding: 0px 20px;/*relleno arriba y hacias los costados*/
+}
+.menu nav ul li a{
+    font-size: 16px;/*tamaño de la letra*/
+    text-decoration: none;/*quitar la linea de abajo del texto que viene por defecto*/
+    color: #000;/*color de la letra*/
+    transition: opacity 300ms;/*trasnsicion de la letra de 300 milisegundos*/
+}
+/*animacion al menu con hover*/
+.menu nav ul li a:hover{
+    opacity: 0.6;/*opacidad*/
+}
+
+/*estilos del boton de la cabecera*/
+.btn__header-register,.btn__register-cover{/*tenemos el.btn__registrer-cover porque hemos agregado el mismo efecto y color para el boton del main*/
+    padding: 14px 50px; /*relleno arriba de 14 px y a los costados de 50px*/
+    border: none;/*quitamos el borde que viene por defecto*/
+    background: #000;/*color del fondo del boton*/
+    color: white;/*color de la letra del boton*/
+    font-weight: 500;/*ancho de la letra*/
+    font-size: 16px;/*tamaño de la letra*/
+    cursor: pointer;/*para que cuando pase el mouse se ponga una manito*/
+   transition: background, color, 300ms;/*transicion al boton*/
+}
+.btn__header-register:hover,.btn__register-cover:hover{
+    background:#69F1A1 ;/*fondo al pasar el mouse*/
+    color: #000;/*color de la letra al pasar el mouse*/
+}
+#icon-menu{
+    display: none;
+}
+
+
+/*seccion main portada - cover*/
+main{
+    max-width: 1200px; /*ancho maximo*/
+    height: calc(100vh + 800px);/*altura para generar el efecto deseado*/
+   padding: 40px;/*relleno*/
+   margin: auto;/*centrar los elementos del main*/
+   
+}
+
+/*div padre*/
+.cover{
+    display: flex;/*colocamos para que el texto y el video se pongan uno al lado del otro*/
+    justify-content: center;/*centrado*/
+    margin-top: 60px;/*bajar un poco el elemento y no este tan pegado a la cabecera*/
+}
+/*div  que abarca al h1 y al p*/
+.text__information-cover{
+    width: 50%;/*ocupa el 50% */
+}
+.text__information-cover h1{
+    font-size:50px ;/*tamaño de la letra del h1*/
+}
+.text__information-cover p{
+    font-size:18px ;/*tamaño de la letra*/
+    margin-top: 40px;/*espaciado de arriba del top para que mantenga su distancia con el h1*/
+}
+
+/*botones del main*/
+
+/*contenedor padre*/
+.buttons__cover{
+    display: flex;/*posicionar uno al lado del otro*/
+    margin-top: 40px;/* dar espacio en la parte de arriba para que no este junto al parrafo*/
+}
+
+.btn__readmore-cover{
+    padding: 14px 40px;/*relleno de 14px arriba y abajo y de 40 px a los costados*/
+    border:none;/*quitamos el borde del boton*/
+    color: #000;/*color del boton*/
+    font-weight: 500;/*ancho de la letra*/
+    font-size:16px ;/*tamaño de la letra*/
+    cursor: pointer;/*cuando pase el cursor cambie a una manito*/
+    margin-left: 10px;/*poner 10 px a la izquierda del otro boton*/
+    transition: background 300ms;/*transicion en el bacground o en el color de fondo*/
+}
+/*efecto hover al boton*/
+.btn__readmore-cover:hover{
+    background: #E8E8E8;/*cambio de color */
+}
+
+/*estilos del video*/
+
+/*contenedor padre*/
+.media__cover{
+    width: 50%;/*ancho del contenedor*/
+}
+.media__cover video{
+    width: 100%;/*ancho del 100% igual no sobrepasara a al padre que le hemos colocado lo que es el 50%*/
+    margin-top: -40px;/*menos margen en la parte de arriba para subir un poco el video y este alineado*/
+}
+
+/*banner*/
+/*conetenedor padre*/
+.container__banner{
+   margin-top: 80px;/*un margen de arriba para no estar cerca al video ni los botones*/
+}
+/*contenedor hijo*/
+.banner{
+ height: 250px;/*altura*/
+ display: flex;/*para que el contenido se ponga uno al lado del otro*/
+ align-items: center;/*para centrar*/
+ background-color: #121214;/*color de fondo*/
+ position: relative;
+}
+/*posiosionamiento de las imagenes*/
+/*poniendo el corazon*/
+.banner__icon-corazon{
+    width: 35%;/*ancho que ocupara el 35 % de 250px que es la altura del contenedor padre*/
+    height: 100%;/*altura*/
+}
+/*id corazon*/
+#icon_corazon{
+    width: 400px;/*ancho de la imagen de corazon*/
+    margin-top: -20;/*alto del margen ponemos menos porque queremos tirarlo hacia arriba*/
+    position: relative;
+    filter: drop-shadow(-40px 0px 30px rgba(0,0,0,0.5));/*generacion de sombra en el contorno de la imagen*/
+}
+
+/*poniendo la imagen del fuego*/
+/*contenedor padre*/
+.banner__icon-fuego{
+    height: 100%;/*altura del 100%*/
+    position: absolute;
+    right: 10px;/*se coloca 10 px a la derecha*/
+    overflow: hidden;/*para que la imagen recorte*/
+}
+
+#icon_fuego{
+   width: 300px;
+   position: relative;
+   margin-top: -100px;
+   opacity: 0.6;
+    
+}
+/*posicionamiento del texto del banner*/
+.banner__texto {
+    width: 60%;/*ancho del contenedor padre del parrafo*/
+    position: relative;
+    padding: 40px;/*relleno*/
+
+}
+.banner__texto h2{
+    color: #fff;/*color del texto*/
+    font-size: 32px;/*tamaño de la letra*/
+    font-weight: 400;/*ancho de la letra*/
+}
+
+.banner__texto a{
+    text-decoration: none;/*quitarle la linea por defecto que viene debajo*/
+    display: block;/*colocamos lo que el block para poder poner el margin*/
+    margin-top: 20px;/*creamo un espaciado para que no se pegue al parrafo*/
+    color: #fff;/*color de texto*/
+    font-size: 16px;/*tamaño de la letra*/
+    font-weight: bold;/*ancho de la letra*/
+    transition: color 300ms;/* transcion de milisegundos para generar la animacion*/
+}
+.banner__texto a:hover{
+    color: #69F1A1;/*color para que al pasar el mouse se ponga de verde*/
+}
+
+/*footer*/
+footer{
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    /*background: #fff;*/
+    padding: 20px;
+    cursor: pointer;
+    
+
+}
+.pie-de-pagina{
+    font-size: 15px;
+    font-weight: bold;
+    transition: .2s ease;
+}
+.pie-de-pagina:hover{
+    color:#69F1A1
+}
+
+/*responsive con media query version mobile*/
+@media (max-width:1024px){
+    /*convitiendolo para celular*/
+    /*seleccionamos lo que es el header-cabecera y el main el cuerpo*/
+    .container__header ,main{
+        padding: 20px;/*relleno de 20px*/
+    }
+    #icon-menu{
+        display: block;/*para que me muestre la barra del menu de hambuerguesa*/
+        cursor: pointer;/*para que aparesca una manito*/
+        font-size: 24px;/*tamaño del menu de hamburguesa*/
+        
+    }
+    /*boton de registrar en el header*/
+    .header__register{
+        display: none;/*escondemos lo que es el boton*/
+    }
+    /*propiedades del menu de la version mobile*/
+    .menu{
+        height: 0px;/*altura de 0 px para lograr que aparesca y desaparesca*/
+        position: absolute;
+        right: 20px;/*moviendo a la derecha 20px*/
+        top: 70px;/*un tope de alto de 70px*/
+        overflow: hidden;/*para ocacionar el efecto*/
+        z-index: 10;/*para que me aparezca encima de todo*/
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);/*sombra al rededor del cuadro*/
+        transition:all 300ms ;/*transicion de 300 milisegundos*/
+
+    }
+    
+    .menu nav ul{
+        padding: 20px 0px;/*relleno*/
+        flex-direction: column;/*direccion en columna*/
+        background: #fff;/*color de fondo*/
+    }
+
+    .menu nav ul li{
+        padding: 10px 40px;/*relleno*/
+    }
+    /*js*/
+    .mostrar_menu{ /*clase manipulada por java script*/
+        height: 235px;/*altura*/
+    }
+
+    /*enpesamos con el main*/
+    /*h1*/
+    .text__information-cover h1{
+        font-size: 40px;/*tamaño del texto en esta ocacion lo achicamos*/
+
+    }
+    /*tamaño de la letra del parrafo*/
+    .text__information-cover p{
+        font-size: 16px;/*achicamos la letra del parrafo*/
+
+    }
+
+    /*letras del baner*/
+    .banner__texto h2{
+        font-size:22px ;/*disminuimos el tamaño*/
+    }
+    #icon_corazon{
+        left: -60px;/*empujamos hacia la izquierda a la imagen de corazon*/
+    }
+    .banner__icon-fuego{
+        right: -20px;/*empujamos a la derecha a la imagen de fuego*/
+    }
+    
+
+
+}
+/*empesamos con el otro media de 920px*/
+@media (max-width:920px){
+    .text__information-cover{
+        width: 100%;/*ancho del 100% de la pagina*/
+    }
+    .media__cover{
+        display: none;/*quitamos el video*/
+    }
+    /*banner que contiene a las dos iamgenes */
+    .banner{
+        height: auto;/*altura de auto para que se adapte a sus contenedores hijos*/
+        flex-wrap: wrap;/*para que todo se ponga debajo del otro*/
+    }
+    /*imagen del fuego la quitamos*/
+    #icon_fuego{
+        display: none;/*quitamos la imagen*/
+    }
+    /*imagen de corazon*/
+    #icon_corazon{
+        left: 0;
+    }
+
+   .banner__texto{
+        width: 100%;
+        margin-top: -100px;
+    }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magtimus-Pro</title>
+    <link rel="stylesheet" href="stylos.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/letra-m.png">
+</head>
+<body>
+    <header>
+        <!--creacion de tres contenedores para el header-->
+        <div class="container__header">
+            <!--creacion del logo-->
+            <div class="logo">
+                <img src="img/logo-magtimus-small-v2-png.png" alt="logo">
+            </div>
+            <!--creacionn del menu-->
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Soluciones</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Compañia</a></li>
+                        <li><a href="#">Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--BOTON DE HAMBURGUESA-->
+            <i class="fa-solid fa-bars" id="icon-menu"></i>
+            <!--creacion del boton-->
+            <div class="header__register">
+                <input class="btn__header-register" type="button" value="Registrarse">
+            </div>
+        </div>
+    </header>
+      
+    <!--cuerpo de la pagina con un main-->
+
+    <main>
+        <!--contenedor padre-->
+        <div class="cover">
+            <!--contendor para el titulo y el parrafp-->
+            <div class="text__information-cover">
+                <h1>Haz historia. No se limite a informar sobre ello</h1>
+                <p>Vaya más allá de informar sobre datos históricos. Utilice la inteligencia procesable de cada
+                    evento digital para impactar positivamente en los resultados comerciales. Continuamente. En
+                    tiempo real. A escala.</p>
+                    <!--contenedor para los botones-->
+                    <div class="buttons__cover">
+                        <input type="button" class="btn__register-cover" value="Registrar"> 
+                        <input type="button" class="btn__readmore-cover" value="Leer Mas">
+                    </div>
+            </div>
+            <!--contenedor para colocar el video-->
+            <div class="media__cover">
+                <video src="img/media_animacion_cover.webm" autoplay playing loop 
+                preload="auto" muted></video>
+            </div>
+
+        </div>
+
+        <!--creacion del banner de la ultima parte de la pagina-->
+        <div class="container__banner">
+
+            <!--colocacion de la imagen -->
+            <div class="banner">
+                <!--corazon-->
+                <div class="banner__icon-corazon">
+                    <img src="img/heart_notify.png" id="icon_corazon" alt="">
+                </div>
+                <!--fuego-->
+                <div class="banner__icon-fuego">
+                    <img src="img/fire-dynamic-color.png" id="icon_fuego" alt="fuego">
+                </div>
+
+                <!--incrustacion del texto  -->
+
+                <div class="banner__texto">
+                    <h2>La pila moderna de inteligencia de datos en la nube para su negocio de misión crítica.</h2>
+                    
+                    <!--creacion de un boton leer mas-->
+                    <a href="#">leer mas</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="main.js"> </script>
+
+    <footer>
+        <p class="pie-de-pagina">©2023 Derechos reservados <br>
+            Dhanfer / Vasquez
+
+        </p>
+    </footer>
+
+</body>
+</html>
